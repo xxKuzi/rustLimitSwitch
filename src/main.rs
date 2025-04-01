@@ -9,7 +9,7 @@ fn main() {
     let gpio = Gpio::new().expect("Failed to access GPIO");
     
     // Set the pin as input with internal pull-up
-    let pin = gpio.get(pin_number).expect("Failed to get pin").into_input_pulldown();
+    let pin = gpio.get(pin_number).expect("Failed to get pin").into_input_pullup();
 
     println!("Checking limit switch (NO)... Press to trigger.");
 
